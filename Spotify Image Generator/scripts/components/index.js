@@ -1,0 +1,1 @@
+export { default as editor } from './editor.js';
