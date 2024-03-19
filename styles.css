@@ -713,12 +713,12 @@ ul > li > p {
 
 .faq li:nth-child(odd) {
 	text-align: left;
-	padding-right: 28.2em;
+	padding-right: 28em;
 }
 
 .faq li:nth-child(even) {
 	text-align: right;
-	padding-left: 28.2em ;
+	padding-left: 28em ;
 }
 
 .about > div > h1,
