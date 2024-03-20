@@ -277,6 +277,7 @@ main {
 	justify-content: space-between;
 	width: 80%;
 	margin-top: 2em;
+	gap: 2em;
 }
 
 .mixtape > .texture {
