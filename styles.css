@@ -671,60 +671,53 @@ main {
     gap: 1em;
 }
 
-.about > div > h1 {
+.about > h1,
+.faq > h2 {
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+.about > h1 {
 	font-weight: 900;
-	margin-bottom: 1em;
 }
 
 .faq {
 	margin-top: 3em;
 }
 
-ul {
+.faq > h2 {
+	font-weight: 900;
+}
+
+.faq > ul {
     display: flex;
     flex-direction: column;
     gap: 2em;
 }
 
-ul > li {
+.faq > ul > li {
     display: flex;
     flex-direction: column;
 }
 
-ul > li > h3 {
+.faq > ul > li > h3 {
+	max-width: 52.7%;
     font-size: 2rem;
     font-weight: 900;
-	margin-bottom: 0.3em;
 }
 
-ul > li > p {
-    opacity: 0.8;
+.faq > ul > li > p {
+	max-width: 52.7%;
     font-size: 1.1rem;
-}
-
-.faq > h2 {
-	padding-top: 1em;
-	font-weight: 900;
+    opacity: 0.8;
 }
 
 .faq > ul > li > p > a {
 	color: #ab7ff1;
 }
 
-.faq li:nth-child(odd) {
-	text-align: left;
-	padding-right: 28em;
-}
-
 .faq li:nth-child(even) {
-	text-align: right;
-	padding-left: 28em;
-}
-
-.about > div > h1,
-.faq > h2 {
-	text-align: center;
-	font-size: 2.5rem;
+	align-items: flex-end;
 }
 
 .github__button {
@@ -735,15 +728,16 @@ ul > li > p {
     margin-top: 5em;
     width: 17em;
     border-radius: 8px;
+	box-shadow: none;
     background-color: var(--purple-heart-950);
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     gap: 10px;
 }
 
 .github__button:hover {
 	background-color: var(--purple-heart-600);
 	transform: scale(1.03);
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.137), 0 2px 4px rgba(0, 0, 0, 0.137), 0 4px 8px rgba(0, 0, 0, 0.137), 0 8px 16px rgba(0, 0, 0, 0.137), 0 16px 32px rgba(0, 0, 0, 0.137), 0 32px 64px rgba(0, 0, 0, 0.137);
+	box-shadow: 0px 7px 11px rgb(0 0 0 / 26%);
 }
 
 .github__button > svg {
