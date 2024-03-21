@@ -107,10 +107,10 @@
 	--kpop-font-color: #dfdfdf;
 	--kpop-border-color: #1a0e86;
 	--kpop-fontborder-color: #d2c5e9;
-	--dubstep-background-color: #808080;
-	--dubstep-font-color: #992727;
-	--dubstep-border-color: #200a0a;
-	--dubstep-fontboder-color: #a8a8a8;
+	--dubstep-background-color: #0e1c3a;
+	--dubstep-font-color: #578cff;
+	--dubstep-border-color: #92aaf7;
+	--dubstep-fontboder-color: #0b7191;
 }
 
 *:link,
@@ -314,7 +314,7 @@ main {
 .metal {
 	font-size: 25px;
 	font-family: 'Grimoire';
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 	background-color: var(--metal-background-color);
 	color: var(--metal-font-color);
 }
@@ -325,7 +325,7 @@ main {
 }
 
 .k_pop {
-	font-size: 24px;
+	font-size: 22px;
 	font-family: 'Tooney';
 	letter-spacing: 1px;
 	background-color: var(--kpop-background-color);
@@ -348,6 +348,7 @@ main {
 
 .dubstep > .texture {
 	background-image: url('./assets/images/dubstep-texture.png');
+	/* opacity: 0.5; */
 }
 
 .editor > .mixtape {
@@ -400,7 +401,7 @@ main {
 
 .editor > .mixtape.k_pop > .name__span-right,
 .editor > .mixtape.k_pop > .name__span-left {
-	font-size: 13px;
+	font-size: 10px;
 	background-color: var(--kpop-border-color);
 	color: var(--kpop-fontborder-color)
 }
@@ -467,6 +468,15 @@ main {
 	flex-direction: column;
 	width: 100%;
 	gap: 10px;
+}
+
+.editor > .mixtape > .mixtape__content > .footer__container > .icons__footer > .icons__brands > .webpage__footer--link {
+	display: flex;
+	align-items: flex-end;
+	font-family: 'Author';
+	font-weight: 600;
+	font-size: 12px;
+	letter-spacing: 1px;
 }
 
 .editor > .mixtape > .mixtape__content > .footer__container > .icons__footer {
