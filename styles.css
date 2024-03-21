@@ -15,12 +15,6 @@
 }
 
 @font-face {
-	font-family: 'Quaaykop';
-	src: url('./assets/fonts/Quaaykop-vmWLZ.ttf') format('truetype');
-	font-display: swap;
-}
-
-@font-face {
 	font-family: 'Grimoire';
 	src: url('./assets/fonts/Grimoire.ttf') format('truetype');
 		 font-display: swap;
@@ -57,6 +51,20 @@
 		 font-weight: 400;
 		 font-display: swap;
 		 font-style: normal;
+}
+
+@font-face {
+	font-family: 'Mutter-Krause';
+	src: url('./assets/fonts/MutterKrause-7oMD.ttf') format('truetype');
+		font-display: swap;
+		font-style: normal;
+}
+
+@font-face {
+	font-family: 'Tooney';
+	src: url('./assets/fonts/TooneyNoodleNf-685o.ttf') format('truetype');
+		font-display: swap;
+		font-style: normal;
 }
 
 * {
@@ -97,8 +105,8 @@
 	--metal-fontborder-color: #8b1818;
 	--kpop-background-color: #5a2fa8;
 	--kpop-font-color: #dfdfdf;
-	--kpop-border-color: #080808;
-	--kpop-fontborder-color: #dfdfdf;
+	--kpop-border-color: #1a0e86;
+	--kpop-fontborder-color: #d2c5e9;
 	--dubstep-background-color: #808080;
 	--dubstep-font-color: #992727;
 	--dubstep-border-color: #200a0a;
@@ -275,7 +283,7 @@ main {
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
-	width: 80%;
+	width: 85%;
 	margin-top: 2em;
 	gap: 2em;
 }
@@ -291,11 +299,12 @@ main {
 }
 
 .pop {
-	font-size: 24px;
-	font-family: 'Quaaykop';
-	letter-spacing: 1px;
+	font-size: 23px;
+	font-family: 'Mutter-Kraise';
+	letter-spacing: 2px;
 	background-color: var(--pop-background-color);
 	color: var(--pop-font-color);
+	font-weight: 200;
 }
 
 .pop > .texture {
@@ -316,9 +325,8 @@ main {
 }
 
 .k_pop {
-	font-size: 19px;
-	font-family: 'Pally';
-	font-weight: 600;
+	font-size: 24px;
+	font-family: 'Tooney';
 	letter-spacing: 1px;
 	background-color: var(--kpop-background-color);
 	color: var(--kpop-font-color);
@@ -390,15 +398,11 @@ main {
 	color: var(--dubstep-fontboder-color);
 }
 
-.editor > .mixtape.k_pop > .name__span-right::after,
-.editor > .mixtape.k_pop > .name__span-left::after {
-	content: '';
-	position: absolute;
-	z-index: 999;
-	inset: 0;
-	background: url('./assets/images/kpop-border-texture.png') repeat;
-	opacity: 1;
-	pointer-events: none;
+.editor > .mixtape.k_pop > .name__span-right,
+.editor > .mixtape.k_pop > .name__span-left {
+	font-size: 13px;
+	background-color: var(--kpop-border-color);
+	color: var(--kpop-fontborder-color)
 }
 
 .editor > .mixtape > .mixtape__content {
@@ -416,7 +420,7 @@ main {
 	display: flex;
 	width: 100%;
 	font-size: 28px;
-	font-weight: 600;
+	font-weight: 900;
 }
 
 .editor > .mixtape > .mixtape__content > .metrics__container {
@@ -573,6 +577,7 @@ main {
 }
 
 .editor > .editor__options > .editor__options--container > div.containerRight > .editor__options--download > button {
+	width: 8em;
 	padding: 0.8em;
 	border-radius: 10px;
 	background-color: transparent;
@@ -705,6 +710,7 @@ main {
 	max-width: 52.7%;
     font-size: 2rem;
     font-weight: 900;
+	margin-bottom: 0.3em;
 }
 
 .faq > ul > li > p {
