@@ -59,5 +59,9 @@ export const themes = {
 	kpop: {
 		name: 'K-pop',
 		id: 'k_pop'
+	},
+	rap: {
+		name: 'Rap',
+		id: 'rap'
 	}
 }

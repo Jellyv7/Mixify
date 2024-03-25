@@ -99,6 +99,8 @@ export const fetchData = async token => {
 
         return {
             user: profileJSON.display_name,
+			country: profileJSON.country,
+			followers: profileJSON.followers.total,
             metrics: {
                 topTracks: {
                     longTerm: topTracksLongJSON.items.map(({ name, artists: [{ name: artistName }] }) => `${name} - ${artistName}`),

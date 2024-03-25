@@ -22,8 +22,8 @@
 }
 
 @font-face {
-	font-family: 'Pally';
-	src: url('./assets/fonts/Pally-Variable.woff2') format('woff2');
+	font-family: 'Summer-Friday';
+	src: url('./assets/fonts/Summerfriday-K73eD.otf') format('opentype');
 		 font-weight: 400 700;
 		 font-display: swap;
 		 font-style: normal;
@@ -67,6 +67,34 @@
 		font-style: normal;
 }
 
+@font-face {
+	font-family: 'Wickhop';
+	src: url('./assets/fonts/WickhopHandwriting.ttf') format('truetype');
+		font-display: swap;
+		font-style: normal;
+}
+
+@font-face {
+	font-family: 'Underground';
+	src: url('./assets/fonts/Underground.ttf') format('truetype');
+		font-display: swap;
+		font-style: normal;
+}
+
+@font-face {
+	font-family: 'Tail-Free';
+	src: url('./assets/fonts/TrailFree.ttf') format('truetype');
+		font-display: swap;
+		font-style: normal;
+}
+
+@font-face {
+	font-family: 'Death-Squad';
+	src: url('./assets/fonts/DeathSquad.ttf') format('truetype');
+		font-display: swap;
+		font-style: normal;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -95,7 +123,7 @@
 	--purple-heart-800: #422ba8;
 	--purple-heart-900: #3a2a85;
 	--purple-heart-950: #23194d;
-	--pop-background-color: #915be9;
+	--pop-background-color: #945eec;
 	--pop-border-color: #5e1ec4;
 	--pop-font-color: #e6e6e6;
 	--pop-fontborder-color: #ceccd8;
@@ -111,6 +139,10 @@
 	--dubstep-font-color: #578cff;
 	--dubstep-border-color: #92aaf7;
 	--dubstep-fontboder-color: #0b7191;
+	--rap-background-color: #6d6c6c;
+	--rap-border-color: #0e0c0c;
+	--rap-font-color: #720909;
+	--rap-fontborder-color: #b4abab;
 }
 
 *:link,
@@ -300,8 +332,8 @@ main {
 
 .pop {
 	font-size: 23px;
-	font-family: 'Mutter-Kraise';
-	letter-spacing: 2px;
+	font-family: 'Summer-Friday';
+	letter-spacing: 1px;
 	background-color: var(--pop-background-color);
 	color: var(--pop-font-color);
 	font-weight: 200;
@@ -314,7 +346,7 @@ main {
 .metal {
 	font-size: 25px;
 	font-family: 'Grimoire';
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	background-color: var(--metal-background-color);
 	color: var(--metal-font-color);
 }
@@ -325,7 +357,7 @@ main {
 }
 
 .k_pop {
-	font-size: 22px;
+	font-size: 20px;
 	font-family: 'Tooney';
 	letter-spacing: 1px;
 	background-color: var(--kpop-background-color);
@@ -338,7 +370,7 @@ main {
 }
 
 .dubstep {
-	font-size: 24px;
+	font-size: 26px;
 	font-family: 'Trash-Hand';
 	font-weight: 400;
 	letter-spacing: 1px;
@@ -348,7 +380,19 @@ main {
 
 .dubstep > .texture {
 	background-image: url('./assets/images/dubstep-texture.png');
-	/* opacity: 0.5; */
+}
+
+.rap {
+	font-size: 17px;
+	font-family: 'Wickhop';
+	letter-spacing: 1px;
+	background-color: var(--rap-background-color);
+	color: var(--rap-font-color);
+}
+
+.rap > .texture {
+	background-image: url('./assets/images/rap-texture.png');
+	opacity: 0.6;
 }
 
 .editor > .mixtape {
@@ -381,6 +425,7 @@ main {
 
 .editor > .mixtape.pop > .name__span-right,
 .editor > .mixtape.pop > .name__span-left {
+	font-size: 11px;
 	background-color: var(--pop-border-color);
 	color: var(--pop-fontborder-color);
 }
@@ -388,22 +433,32 @@ main {
 .editor > .mixtape.metal > .name__span-right,
 .editor > .mixtape.metal > .name__span-left {
 	font-size: 12px;
+	letter-spacing: 2px;
 	background-color: var(--metal-border-color);
 	color: var(--metal-fontborder-color);
 }
 
 .editor > .mixtape.dubstep > .name__span-right,
 .editor > .mixtape.dubstep > .name__span-left {
-	font-size: 13px;
+	font-size: 12px;
 	background-color: var(--dubstep-border-color);
 	color: var(--dubstep-fontboder-color);
 }
 
 .editor > .mixtape.k_pop > .name__span-right,
 .editor > .mixtape.k_pop > .name__span-left {
-	font-size: 10px;
+	font-size: 12px;
+	font-family: 'Trash-Hand';
 	background-color: var(--kpop-border-color);
 	color: var(--kpop-fontborder-color)
+}
+
+.editor > .mixtape.rap > .name__span-right,
+.editor > .mixtape.rap > .name__span-left {
+	font-size: 12px;
+	letter-spacing: 2px;
+	background-color: var(--rap-border-color);
+	color: var(--rap-fontborder-color);
 }
 
 .editor > .mixtape > .mixtape__content {
@@ -420,8 +475,27 @@ main {
 .editor > .mixtape > .mixtape__content > .mixtape__title {
 	display: flex;
 	width: 100%;
-	font-size: 28px;
+	font-size: 25px;
 	font-weight: 900;
+}
+
+.editor > .mixtape.pop > .mixtape__content > .mixtape__title {
+	font-family: 'Tail-Free';
+	font-weight: 200;
+	font-size: 32px;
+	letter-spacing: 2px;
+}
+
+.editor > .mixtape.metal > .mixtape__content > .mixtape__title {
+	font-family: 'Death-Squad';
+	text-transform: uppercase;
+	font-size: 28px;
+}
+
+.editor > .mixtape.rap > .mixtape__content > .mixtape__title {
+	font-family: 'Underground';
+	text-transform: uppercase;
+	font-size: 26px;
 }
 
 .editor > .mixtape > .mixtape__content > .metrics__container {
@@ -470,15 +544,6 @@ main {
 	gap: 10px;
 }
 
-.editor > .mixtape > .mixtape__content > .footer__container > .icons__footer > .icons__brands > .webpage__footer--link {
-	display: flex;
-	align-items: flex-end;
-	font-family: 'Author';
-	font-weight: 600;
-	font-size: 12px;
-	letter-spacing: 1px;
-}
-
 .editor > .mixtape > .mixtape__content > .footer__container > .icons__footer {
 	display: flex;
 	align-items: flex-end;
@@ -511,26 +576,9 @@ main {
 	text-align: justify;
 }
 
-.editor > .mixtape.pop > .mixtape__content > .footer__container > span {
+.editor > .mixtape > .mixtape__content > .footer__container > span {
 	font-weight: 400;
-	color: black;
-	letter-spacing: 0px;
-}
-
-.editor > .mixtape.dubstep > .mixtape__content > .footer__container > span {
-	font-weight: 400;
-	color: var(--dubstep-border-color);
-	letter-spacing: 0px;
-}
-
-.editor > .mixtape.metal > .mixtape__content > .footer__container > span {
-	font-weight: 400;
-	letter-spacing: 0px;
-}
-
-.editor > .mixtape.k_pop > .mixtape__content > .footer__container > span {
-	font-weight: 400;
-	letter-spacing: 0px;
+	letter-spacing: unset;
 }
 
 .editor > .editor__options {

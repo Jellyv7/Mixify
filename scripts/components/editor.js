@@ -7,7 +7,7 @@ import { metrics, terms, alignments, themes } from '../lib/index.js';
 const { artist, tracks, genre } = metrics;
 const { longTerm, mediumTerm, shortTerm } = terms;
 const { center, left, right } = alignments;
-const { metal, dubstep, pop, kpop } = themes;
+const { metal, dubstep, pop, kpop, rap } = themes;
 
 export default function (data) {
 
@@ -24,8 +24,8 @@ export default function (data) {
 		const { id } = currentTarget;
 		props[type] = id;
 		populateUI(props, data);
-		const buttonMediumTerm = document.getElementById('mediumTerm');
-		const buttonLongTerm = document.getElementById('longTerm');
+		// const buttonMediumTerm = document.getElementById('mediumTerm');
+		// const buttonLongTerm = document.getElementById('longTerm');
 
 		const currentSelected = currentTarget.parentElement.querySelector('.selectedButton');
 		currentSelected?.classList.remove('selectedButton');
@@ -161,7 +161,14 @@ export default function (data) {
 			callback: e => handleTheme(e),
 			id: dubstep.id,
 			base: false
+		},
+		{
+			name: rap.name,
+			callback: e => handleTheme(e),
+			id: rap.id,
+			base: false
 		}
+
 	];
 	
 	const TextOptions = [

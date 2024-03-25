@@ -1,7 +1,7 @@
 import '../lib/JsBarcode.js';
 import { salem } from '../lib/salem.js';
 
-export default function (name, parent) {
+export default function (name, country, followers, parent) {
 
 	const options = {
 		font: 'ClashDisplay-Variable',
@@ -20,7 +20,7 @@ export default function (name, parent) {
 		]
 	});
 
-	JsBarcode(barcode, `${name[0]}VE1709`, options);
+	JsBarcode(barcode, `${name[0]}${country}${followers}`, options);
 
 	salem.render({parent, node: barcode });
 };
