@@ -95,6 +95,13 @@
 		font-style: normal;
 }
 
+@font-face {
+	font-family: 'Qumpellkano';
+	src: url('./assets/fonts/Qumpellkano.otf') format('opentype');
+		font-display: swap;
+		font-style: normal;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -123,9 +130,9 @@
 	--purple-heart-800: #422ba8;
 	--purple-heart-900: #3a2a85;
 	--purple-heart-950: #23194d;
-	--pop-background-color: #945eec;
-	--pop-border-color: #5e1ec4;
-	--pop-font-color: #e6e6e6;
+	--pop-background-color: #d46bc3;
+	--pop-border-color: #a263ef;
+	--pop-font-color: #fdf6f6;
 	--pop-fontborder-color: #ceccd8;
 	--metal-background-color: #080808;
 	--metal-border-color: #000000;
@@ -427,7 +434,7 @@ main {
 .editor > .mixtape.pop > .name__span-left {
 	font-size: 11px;
 	background-color: var(--pop-border-color);
-	color: var(--pop-fontborder-color);
+	color: #dfdfdf;
 }
 
 .editor > .mixtape.metal > .name__span-right,
@@ -480,10 +487,11 @@ main {
 }
 
 .editor > .mixtape.pop > .mixtape__content > .mixtape__title {
-	font-family: 'Tail-Free';
+	font-family: 'Qumpellkano';
 	font-weight: 200;
-	font-size: 32px;
+	font-size: 23px;
 	letter-spacing: 2px;
+	color: #1d20ac;
 }
 
 .editor > .mixtape.metal > .mixtape__content > .mixtape__title {
@@ -550,11 +558,13 @@ main {
 	justify-content: space-between;
 }
 
-.editor > .mixtape > .mixtape__content > .footer__container > .icons__footer > .icons__barcode {
+.editor > .mixtape > .mixtape__content > .footer__container > .icons__footer > .icons__left {
+	display: flex;
 	height: 60px;
+	gap: 1em;
 }
 
-.editor > .mixtape > .mixtape__content > .footer__container > .icons__footer > .icons__barcode > svg {
+.editor > .mixtape > .mixtape__content > .footer__container > .icons__footer > .icons__left > svg {
 	width: 100%;
 	height: 100%;
 }

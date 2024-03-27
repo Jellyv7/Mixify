@@ -23,7 +23,7 @@ export default function (data) {
 		const { currentTarget } = e;
 		const { id } = currentTarget;
 		props[type] = id;
-		populateUI(props, data);
+		populateUI(props, data); // !!
 		// const buttonMediumTerm = document.getElementById('mediumTerm');
 		// const buttonLongTerm = document.getElementById('longTerm');
 
@@ -57,7 +57,7 @@ export default function (data) {
 	const downloadImage = () => {
 		modernScreenshot.domToPng(document.querySelector('.mixtape'), {
 			scale: 3
-		}).then(dataUrl => {
+		}).then(dataUrl => { // No al then, si al async await
 			const link = document.createElement('a')
 			link.download = 'mixtape.png'
 			link.href = dataUrl
@@ -179,7 +179,7 @@ export default function (data) {
 					event: 'click',
 					callback: e => {
 						handleAlignment(e, left.id)
-						handleData(e, 'align')
+						// handleData(e, 'align')
 					}
 				}
 			],
@@ -193,7 +193,7 @@ export default function (data) {
 					event: 'click',
 					callback: e => {
 						handleAlignment(e, center.id)
-						handleData(e, 'align')
+						// handleData(e, 'align')
 					}
 				}
 			],
@@ -207,7 +207,7 @@ export default function (data) {
 					event: 'click',
 					callback: e => {
 						handleAlignment(e, right.id)
-						handleData(e, 'align')
+						// handleData(e, 'align')
 					}
 				}
 			],

@@ -33,6 +33,13 @@ export const fetchFromSpotify = async (endpoint, token) => {
 
 export const fetchData = async token => {
 
+	const createQr = async () => {
+		const qrCode = await fetch(`https://api.qrserver.com/v1/create-qr-code/?size=60x60&format=svg&data=https://spotifymixify.netlify.app/`);
+		return await qrCode.text()
+	}
+	
+	const QR = await createQr();
+
 	//Destructure from function fetchFromSpotify, all the fetch at the same time with Promise.all()
     try {
         const [
@@ -65,8 +72,6 @@ export const fetchData = async token => {
             topArtistShortJSON.items
         ];
 
-		console.log(allTracks[0])
-
 		//We take all arrays from artist and tracks, we take their genres and make a flatmap to them, to obtain only one array with all of the genres
 		const trackGenresLongTerm = allTracks[0].flatMap(track => track.artists.flatMap(artist => artist.genres)).filter(Boolean);
         const artistGenresLongTerm = allArtists[0].flatMap(artist => artist.genres).filter(Boolean);
@@ -89,18 +94,24 @@ export const fetchData = async token => {
 				genreCounts[genre] = (genreCounts[genre] || 0) + 1;
 			});
 
-			console.log(genreCounts)
-
 			const sortedGenres = Object.keys(genreCounts).sort((a, b) => genreCounts[b] - genreCounts[a]);
 			// Obtain top 10 genres 
 			const topGenres = sortedGenres.slice(0, 10);
 			return topGenres
 		}
 
+		let countLong = 0;
+
+		for (let i = 0; i < 10 ; i++) {
+			countLong = countLong + topTracksLongJSON.items[i]['duration_ms'];
+		}
+
         return {
             user: profileJSON.display_name,
 			country: profileJSON.country,
 			followers: profileJSON.followers.total,
+			duration: `${countLong}`,
+			codeQR: `${QR}`,
             metrics: {
                 topTracks: {
                     longTerm: topTracksLongJSON.items.map(({ name, artists: [{ name: artistName }] }) => `${name} - ${artistName}`),
@@ -116,7 +127,6 @@ export const fetchData = async token => {
 					longTerm: countGenreFrequency(allGenresLongTerm),
 					mediumTerm: countGenreFrequency(allGenresMediumTerm),
 					shortTerm: countGenreFrequency(allGenresShortTerm)
-
 				}
             }
         };

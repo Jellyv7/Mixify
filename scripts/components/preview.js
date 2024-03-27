@@ -32,6 +32,10 @@ export default function (props, data, parent) {
 	const username = data.user;
 	const country = data.country;
 	const followers = data.followers;
+	const duration = data.duration;
+	const qrCode = data.codeQR
+
+	console.log(qrCode)
 
 	const metricParent = salem.createNode({
 		attributes: [
@@ -54,7 +58,7 @@ export default function (props, data, parent) {
 
 	salem.createNode({
 		parent: metricParent,
-		content: `data from ${username} on Spotify - 170921`,
+		content: `data from ${username} on Spotify - ${followers}`,
 		attributes: [
 			{
 				attr: 'class',
@@ -130,17 +134,28 @@ export default function (props, data, parent) {
 	});
 
 	
-	const iconsBarcode = salem.createNode({
+	const iconsLeft = salem.createNode({
 		parent: iconsFooter,
 		attributes: [
 			{
 				attr: 'class',
-				value: 'icons__barcode'
+				value: 'icons__left'
 			}
 		]
 	});
 
-	barcode(username, country, followers, iconsBarcode)
+	barcode(username, country, duration, iconsLeft);
+
+	salem.createNode({
+		parent: iconsLeft,
+		content: qrCode,
+		attributes: [
+			{
+				attr: 'class',
+				value: 'qr'
+			}
+		]
+	});
 
 	salem.createNode({
 		parent: iconsFooter,
@@ -208,7 +223,7 @@ export default function (props, data, parent) {
 
 	salem.createNode({
 		parent: metricParent,
-		content: `data from ${username} on Spotify - 170921`,
+		content: `data from ${username} on Spotify - ${followers}`,
 		attributes: [
 			{
 				attr: 'class',
