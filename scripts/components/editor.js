@@ -23,14 +23,16 @@ export default function (data) {
 		const { currentTarget } = e;
 		const { id } = currentTarget;
 		props[type] = id;
-		populateUI(props, data); // !!
-		// const buttonMediumTerm = document.getElementById('mediumTerm');
-		// const buttonLongTerm = document.getElementById('longTerm');
+		populateUI(props, data);
+	}
+
+	const handleButtonsSelected = e => {
+		const { currentTarget } = e;
 
 		const currentSelected = currentTarget.parentElement.querySelector('.selectedButton');
 		currentSelected?.classList.remove('selectedButton');
 		currentTarget.classList.add('selectedButton');
-	}
+	};
 
 	const handleTheme = e => {
 		const { currentTarget: { id } } = e;
@@ -71,7 +73,10 @@ export default function (data) {
 			events: [
 				{
 					event: 'click',
-					callback: e => handleData(e, 'metric')
+					callback: e => {
+						handleData(e, 'metric')
+						handleButtonsSelected(e)
+					}
 				}
 			],
 			id: tracks.id,
@@ -82,7 +87,10 @@ export default function (data) {
 			events: [
 				{
 					event: 'click',
-					callback: e => handleData(e, 'metric')
+					callback: e => {
+						handleData(e, 'metric')
+						handleButtonsSelected(e)
+					}
 				}
 			],
 			id: artist.id,
@@ -93,7 +101,10 @@ export default function (data) {
 			events: [
 				{
 					event: 'click',
-					callback: e => handleData(e, 'metric')
+					callback: e => {
+						handleData(e, 'metric')
+						handleButtonsSelected(e)
+					}
 				}
 			],
 			id: genre.id,
@@ -107,7 +118,10 @@ export default function (data) {
 			events: [
 				{
 					event: 'click',
-					callback: e => handleData(e, 'term')
+					callback: e => {
+						handleData(e, 'term');
+						handleButtonsSelected(e);
+					}
 				}
 			],
 			id: longTerm.id,
@@ -118,7 +132,10 @@ export default function (data) {
 			events: [
 				{
 					event: 'click',
-					callback: e => handleData(e, 'term')
+					callback: e => {
+						handleData(e, 'term');
+						handleButtonsSelected(e);
+					}
 				}
 			],
 			id: mediumTerm.id,
@@ -129,7 +146,10 @@ export default function (data) {
 			events: [
 				{
 					event: 'click',
-					callback: e => handleData(e, 'term')
+					callback: e => {
+						handleData(e, 'term');
+						handleButtonsSelected(e);
+					}
 				}
 			],
 			id: shortTerm.id,
@@ -178,8 +198,8 @@ export default function (data) {
 				{
 					event: 'click',
 					callback: e => {
-						handleAlignment(e, left.id)
-						// handleData(e, 'align')
+						handleAlignment(e, left.id);
+						handleButtonsSelected(e);
 					}
 				}
 			],
@@ -192,8 +212,8 @@ export default function (data) {
 				{
 					event: 'click',
 					callback: e => {
-						handleAlignment(e, center.id)
-						// handleData(e, 'align')
+						handleAlignment(e, center.id);
+						handleButtonsSelected(e);
 					}
 				}
 			],
@@ -206,8 +226,8 @@ export default function (data) {
 				{
 					event: 'click',
 					callback: e => {
-						handleAlignment(e, right.id)
-						// handleData(e, 'align')
+						handleAlignment(e, right.id);
+						handleButtonsSelected(e);
 					}
 				}
 			],
@@ -226,6 +246,7 @@ export default function (data) {
 		]
 	});
 	
+	//Launch preview
 	preview(props, data, editor);
 	
 	const editorOptions = salem.createNode({

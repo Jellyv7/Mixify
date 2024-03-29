@@ -3,6 +3,7 @@ import { salem } from '../lib/salem.js';
 
 export default function (name, country, duration, parent) {
 
+	//Transform duration of all songs to minutes and seconds
 	const totalSeconds = Math.floor(duration / 1000);
 	const minutes = Math.floor(totalSeconds / 60);
 	const seconds = totalSeconds % 60;

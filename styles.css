@@ -195,13 +195,15 @@ p {
 body {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	align-items: center;
+	justify-content: space-between;
 	position: relative;
 	width: 100%;
+	min-height: 100dvh;
 	font-family: 'Author', sans-serif;
 	color: var(--white);
 	background-color: var(--background);
-	overflow: hidden;
+	overflow-x: hidden;
 	overflow-y: auto;
 	background-position: 0px 0px;
 	background-image: radial-gradient(75% 75% at 49% 102%, #5433D1 0%, #121216 100%);
@@ -364,7 +366,7 @@ main {
 }
 
 .k_pop {
-	font-size: 20px;
+	font-size: 19px;
 	font-family: 'Tooney';
 	letter-spacing: 1px;
 	background-color: var(--kpop-background-color);
@@ -734,8 +736,13 @@ main {
 	cursor: default;
 }
 
-.about,
-.faq {
+.about {
+	margin-top: 3em;
+	gap: 3em;
+}
+
+.section__about,
+.section__faq {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -745,54 +752,74 @@ main {
     gap: 1em;
 }
 
-.about > h1,
-.faq > h2 {
-	text-align: center;
+.section__about > h1,
+.section__faq > h2 {
 	font-size: 2.5rem;
-}
-
-.about > h1 {
 	font-weight: 900;
+	text-align: center;
 }
 
-.faq {
-	margin-top: 3em;
+.section__about > p {
+	opacity: .8;
 }
 
-.faq > h2 {
-	font-weight: 900;
-}
-
-.faq > ul {
+.section__faq > ul {
     display: flex;
     flex-direction: column;
+	align-items: center;
+	width: 100%;
     gap: 2em;
 }
 
-.faq > ul > li {
+.section__faq > ul > li {
     display: flex;
-    flex-direction: column;
 }
 
-.faq > ul > li > h3 {
+.section__faq > ul > li > div {
+	display: flex;
+    flex-direction: column;
+	position: relative;
 	max-width: 52.7%;
+	gap: .5em;
+}
+
+.section__faq > ul > li > div > div {
+    position: absolute;
+    left: 90%;
+    top: 70%;
+    width: 60px;
+    color: var(--white);
+    rotate: 7deg;
+    opacity: 0.2;
+}
+
+.section__faq > ul > li > div > div > svg {
+	width: 100%;
+}
+
+.section__faq > ul > li:nth-child(even) {
+	justify-content: flex-end;
+
+	> div > div {
+		right: 97%;
+		left: unset;
+	}
+}
+
+.section__faq > ul > li > div > h3 {
+	max-width: 100%;
     font-size: 2rem;
     font-weight: 900;
-	margin-bottom: 0.3em;
 }
 
-.faq > ul > li > p {
-	max-width: 52.7%;
+.section__faq > ul > li > div > p {
+	max-width: 100%;
     font-size: 1.1rem;
     opacity: 0.8;
 }
 
-.faq > ul > li > p > a {
+.section__faq > ul > li > div > p > a {
 	color: #ab7ff1;
-}
-
-.faq li:nth-child(even) {
-	align-items: flex-end;
 }
 
 .github__button {
@@ -800,7 +827,6 @@ main {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    margin-top: 5em;
     width: 17em;
     border-radius: 8px;
 	box-shadow: none;
@@ -840,9 +866,11 @@ footer {
     padding-top: 2em;
     margin-top: 5em;
     margin-bottom: 2em;
+	width: 80%;
     font-family: 'Author', sans-serif;
     font-weight: 400;
     font-style: italic;
+	text-align: center;
     letter-spacing: 0.25rem;
     gap: 1em;
 }
@@ -854,7 +882,7 @@ footer::before {
 	left: 0;
 	right: 0;
 	margin: auto;
-	width: 80%;
+	width: 100%;
 	height: 1px;
 	background-color: #ffffff15;
 }
@@ -878,4 +906,44 @@ footer::before {
 
 .icons_links > a:hover > svg {
 	color: var(--background);
-} 
+}
+
+@media (width <= 480px) {
+
+	.hero > .hero__container > .title {
+		font-size: 4rem;
+	}
+
+	.hero > .hero__container > .subtitle {
+		width: 11.5em;
+		font-size: 1rem;
+		text-align: center;
+	}
+
+	.hero > #signin {
+		font-size: 1.5rem;
+		width: 5em;
+	}
+
+	.section_about {
+		text-align: center;
+	}
+
+	.section__faq > ul {
+		gap: 3em;
+	}
+
+	.section__faq li:nth-child(2n) {
+		align-items: unset;
+	}
+
+	.section__faq > ul > li > h3 {
+		font-size: 1.6rem;
+		text-align: center;
+	}
+
+	.section__faq > ul > li > h3,
+	.section__faq > ul > li > p {
+		max-width: unset;
+	}
+}
