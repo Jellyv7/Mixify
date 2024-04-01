@@ -130,6 +130,7 @@
 	--purple-heart-800: #422ba8;
 	--purple-heart-900: #3a2a85;
 	--purple-heart-950: #23194d;
+	--link-color: #5184d1 ;
 	--pop-background-color: #d46bc3;
 	--pop-border-color: #a263ef;
 	--pop-font-color: #fdf6f6;
@@ -206,7 +207,7 @@ body {
 	overflow-x: hidden;
 	overflow-y: auto;
 	background-position: 0px 0px;
-	background-image: radial-gradient(75% 75% at 49% 102%, #5433D1 0%, #121216 100%);
+	background: linear-gradient(220.55deg, var(--purple-heart-950) 0%, var(--purple-heart-700) 100%);
 }
 
 body::after {
@@ -340,7 +341,7 @@ main {
 }
 
 .pop {
-	font-size: 23px;
+	font-size: 2vw;
 	font-family: 'Summer-Friday';
 	letter-spacing: 1px;
 	background-color: var(--pop-background-color);
@@ -353,7 +354,7 @@ main {
 }
 
 .metal {
-	font-size: 25px;
+	font-size: 2vw;
 	font-family: 'Grimoire';
 	letter-spacing: 1px;
 	background-color: var(--metal-background-color);
@@ -366,7 +367,7 @@ main {
 }
 
 .k_pop {
-	font-size: 19px;
+	font-size: 1.5vw;
 	font-family: 'Tooney';
 	letter-spacing: 1px;
 	background-color: var(--kpop-background-color);
@@ -379,7 +380,7 @@ main {
 }
 
 .dubstep {
-	font-size: 26px;
+	font-size: 2vw;
 	font-family: 'Trash-Hand';
 	font-weight: 400;
 	letter-spacing: 1px;
@@ -392,7 +393,7 @@ main {
 }
 
 .rap {
-	font-size: 17px;
+	font-size: 1.3vw;
 	font-family: 'Wickhop';
 	letter-spacing: 1px;
 	background-color: var(--rap-background-color);
@@ -562,7 +563,7 @@ main {
 
 .editor > .mixtape > .mixtape__content > .footer__container > .icons__footer > .icons__left {
 	display: flex;
-	height: 60px;
+	height: 9vh;
 	gap: 1em;
 }
 
@@ -801,7 +802,7 @@ main {
 	justify-content: flex-end;
 
 	> div > div {
-		right: 97%;
+		right: 95%;
 		left: unset;
 	}
 }
@@ -819,7 +820,7 @@ main {
 }
 
 .section__faq > ul > li > div > p > a {
-	color: #ab7ff1;
+	color: var(--link-color);
 }
 
 .github__button {
@@ -933,17 +934,92 @@ footer::before {
 		gap: 3em;
 	}
 
-	.section__faq li:nth-child(2n) {
-		align-items: unset;
+	.section__faq > ul > li:nth-child(even) {
+		justify-content: center;
 	}
 
-	.section__faq > ul > li > h3 {
+	.section__faq > ul > li {
+		justify-content: center;
+		width: 25em;
+	}
+
+
+	.section__faq > ul > li > div > h3 {
 		font-size: 1.6rem;
+	}
+
+	.section__faq > ul > li > div > h3,
+	.section__faq > ul > li > div > p {
+		text-align: center;
+		max-width: unset;
+	}
+
+	.editor {
+		flex-direction: column-reverse;
+		width: 90%;
+	}
+
+	.editor > .editor__options > .editor__options--container {
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.editor > .editor__options > .editor__options--container > .containerLeft,
+	.editor > .editor__options > .editor__options--container > .containerRight,
+	.editor > .editor__options > .editor__options--container > .containerLeft  > div,
+	.editor > .editor__options > .editor__options--container > .containerRight > div {
+		align-items: center;
+	}
+
+	.editor > .editor__options > .editor__options--container > .containerLeft  > div > h3,
+	.editor > .editor__options > .editor__options--container > .containerRight > div > h3 {
 		text-align: center;
 	}
 
-	.section__faq > ul > li > h3,
-	.section__faq > ul > li > p {
-		max-width: unset;
+	.editor > .mixtape.pop > .mixtape__content > .mixtape__title,
+	.editor > .mixtape.rap > .mixtape__content > .mixtape__title  {
+		font-size: 4.5vw;
+	}
+
+	.editor > .mixtape.metal > .mixtape__content > .mixtape__title {
+		font-size: 5vw;
+	}
+
+	.editor > .mixtape > .mixtape__content > .footer__container > .icons__footer > .icons__left {
+		height: 13vw;
+	}
+
+	.editor > .mixtape > .mixtape__content > .footer__container > .icons__footer > .icons__brands {
+		height: 5vw;
+	}
+
+	.editor > .editor__options > h2 {
+		text-align: center;
+		font-size: 10vw;
+	}
+
+	.editor > .mixtape > .mixtape__content > .footer__container > span {
+		font-size: 1.74vw;	
+	}
+
+	.editor > .mixtape {
+		width: 90vw;
+		height: 90vw;
+	}
+
+	.rap {
+		font-size: 3.5vw;
+	}
+
+	.k_pop {
+		font-size: 4vw;
+	}
+
+	.pop, .dubstep {
+		font-size: 5vw;
+	}
+
+	.metal {
+		font-size: 5.4vw;
 	}
 }
