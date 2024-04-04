@@ -517,9 +517,11 @@ main {
 .editor > .mixtape > .mixtape__content > .metrics__container {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	line-height: 26px;
 }
 
 .editor > .mixtape > .mixtape__content.left > .mixtape__title {
