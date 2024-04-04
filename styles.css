@@ -1012,19 +1012,19 @@ footer::before {
 
 	.editor > .mixtape.pop > .mixtape__content > .mixtape__title,
 	.editor > .mixtape.rap > .mixtape__content > .mixtape__title {
-		font-size: 4.5vw;
-	}
-
-	.editor > .mixtape.metal > .mixtape__content > .mixtape__title {
-		font-size: 5.5vw;
-	}
-
-	.editor > .mixtape.k_pop > .mixtape__content > .mixtape__title {
 		font-size: 4vw;
 	}
 
+	.editor > .mixtape.metal > .mixtape__content > .mixtape__title {
+		font-size: 4.5vw;
+	}
+
+	.editor > .mixtape.k_pop > .mixtape__content > .mixtape__title {
+		font-size: 2.5vw;
+	}
+
 	.editor > .mixtape.dubstep > .mixtape__content > .mixtape__title {
-		font-size: 6vw;
+		font-size: 4.5vw;
 	}
 
 	.editor > .mixtape > .mixtape__content > .footer__container > .icons__footer > .icons__left {
