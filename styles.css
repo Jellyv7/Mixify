@@ -492,7 +492,7 @@ main {
 .editor > .mixtape.pop > .mixtape__content > .mixtape__title {
 	font-family: 'Qumpellkano';
 	font-weight: 200;
-	font-size: 1.2vw;
+	font-size: 1.5vw;
 	letter-spacing: 2px;
 	color: #1d20ac;
 }
@@ -500,18 +500,18 @@ main {
 .editor > .mixtape.metal > .mixtape__content > .mixtape__title {
 	font-family: 'Death-Squad';
 	text-transform: uppercase;
-	font-size: 1.4vw;
+	font-size: 1.6vw;
 }
 
 .editor > .mixtape.dubstep > .mixtape__content > .mixtape__title {
 	text-transform: uppercase;
-	font-size: 3vw;
+	font-size: 2.5vw;
 }
 
 .editor > .mixtape.rap > .mixtape__content > .mixtape__title {
 	font-family: 'Underground';
 	text-transform: uppercase;
-	font-size: 1.9vw;
+	font-size: 1.8vw;
 }
 
 .editor > .mixtape > .mixtape__content > .metrics__container {
