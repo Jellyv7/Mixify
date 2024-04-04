@@ -148,7 +148,7 @@ export default function (props, data, parent) {
 
 	salem.createNode({
 		parent: iconsLeft,
-		content: `<img src=https://api.qrserver.com/v1/create-qr-code/?size=300x300&format=png&data=https://spotifymixify.netlify.app/></img>`,
+		content: `<img src=https://api.qrserver.com/v1/create-qr-code/?size=300x300&format=png&data=https://mixifysite.netlify.app//></img>`,
 		attributes: [
 			{
 				attr: 'class',

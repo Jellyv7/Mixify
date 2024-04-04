@@ -1010,9 +1010,14 @@ footer::before {
 		text-align: center;
 	}
 
+	.editor > .mixtape > .mixtape__content > .metrics__container {
+		justify-content: space-between;
+		line-height: 19px;
+	}
+
 	.editor > .mixtape.pop > .mixtape__content > .mixtape__title,
 	.editor > .mixtape.rap > .mixtape__content > .mixtape__title {
-		font-size: 4vw;
+		font-size: 4.5vw;
 	}
 
 	.editor > .mixtape.metal > .mixtape__content > .mixtape__title {
@@ -1059,7 +1064,7 @@ footer::before {
 	}
 
 	.rap {
-		font-size: 3.5vw;
+		font-size: 3.6vw;
 	}
 
 	.k_pop {
