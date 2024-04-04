@@ -5,7 +5,7 @@ This web uses the Spotify API to catch the data we need to create the image, the
 
 This web application was inspired by websites like [**Receiptify**](https://receiptify.herokuapp.com/) or [**Instafest**](https://www.instafest.app/home). I wanted to create something similar but with my own ideas, so this is the result!
 
-You can create your mixtape [**here**](https://spotifymixify.netlify.app).
+You can create your mixtape [**here**](https://mixify-site.vercel.app/).
 
 ## THIS IS AN OPEN SOURCE PROJECT
 
