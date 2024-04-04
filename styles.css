@@ -225,7 +225,7 @@ header {
 	align-items: center;
 	justify-content: flex-end;
 	width: 100%;
-	height: 60px;
+	height: 5vw;
 }
 
 header > nav {
@@ -243,7 +243,7 @@ header > nav > a {
 	padding: 0 0.5em;
 	height: 100%;
 	color: var(--white);
-	font-size: 1.2rem;
+	font-size: 1.5vw;
 	font-weight: 600;
 	letter-spacing: 1px;
 }
@@ -324,10 +324,10 @@ main {
 .editor {
 	display: flex;
 	align-items: flex-start;
-	justify-content: space-between;
-	width: 85%;
+	justify-content: center;
+	width: 100%;
 	margin-top: 2em;
-	gap: 2em;
+	gap: 7em;
 }
 
 .mixtape > .texture {
@@ -367,7 +367,7 @@ main {
 }
 
 .k_pop {
-	font-size: 1.5vw;
+	font-size: 1.84vw;
 	font-family: 'Tooney';
 	letter-spacing: 1px;
 	background-color: var(--kpop-background-color);
@@ -393,7 +393,7 @@ main {
 }
 
 .rap {
-	font-size: 1.3vw;
+	font-size: 1.5vw;
 	font-family: 'Wickhop';
 	letter-spacing: 1px;
 	background-color: var(--rap-background-color);
@@ -406,7 +406,7 @@ main {
 }
 
 .editor > .mixtape {
-	--size: 460px;
+	--size: 33.675vw;
     display: flex;
     justify-content: flex-start;
     position: relative;
@@ -435,14 +435,14 @@ main {
 
 .editor > .mixtape.pop > .name__span-right,
 .editor > .mixtape.pop > .name__span-left {
-	font-size: 11px;
+	font-size: 1vw;
 	background-color: var(--pop-border-color);
 	color: #dfdfdf;
 }
 
 .editor > .mixtape.metal > .name__span-right,
 .editor > .mixtape.metal > .name__span-left {
-	font-size: 12px;
+	font-size: 1vw;
 	letter-spacing: 2px;
 	background-color: var(--metal-border-color);
 	color: var(--metal-fontborder-color);
@@ -450,14 +450,14 @@ main {
 
 .editor > .mixtape.dubstep > .name__span-right,
 .editor > .mixtape.dubstep > .name__span-left {
-	font-size: 12px;
+	font-size: 1vw;
 	background-color: var(--dubstep-border-color);
 	color: var(--dubstep-fontboder-color);
 }
 
 .editor > .mixtape.k_pop > .name__span-right,
 .editor > .mixtape.k_pop > .name__span-left {
-	font-size: 12px;
+	font-size: 1vw;
 	font-family: 'Trash-Hand';
 	background-color: var(--kpop-border-color);
 	color: var(--kpop-fontborder-color)
@@ -465,7 +465,7 @@ main {
 
 .editor > .mixtape.rap > .name__span-right,
 .editor > .mixtape.rap > .name__span-left {
-	font-size: 12px;
+	font-size: 0.8vw;
 	letter-spacing: 2px;
 	background-color: var(--rap-border-color);
 	color: var(--rap-fontborder-color);
@@ -485,14 +485,14 @@ main {
 .editor > .mixtape > .mixtape__content > .mixtape__title {
 	display: flex;
 	width: 100%;
-	font-size: 25px;
+	font-size: 1.8vw;
 	font-weight: 900;
 }
 
 .editor > .mixtape.pop > .mixtape__content > .mixtape__title {
 	font-family: 'Qumpellkano';
 	font-weight: 200;
-	font-size: 23px;
+	font-size: 1.8vw;
 	letter-spacing: 2px;
 	color: #1d20ac;
 }
@@ -500,13 +500,18 @@ main {
 .editor > .mixtape.metal > .mixtape__content > .mixtape__title {
 	font-family: 'Death-Squad';
 	text-transform: uppercase;
-	font-size: 28px;
+	font-size: 2.4vw;
+}
+
+.editor > .mixtape.dubstep > .mixtape__content > .mixtape__title {
+	text-transform: uppercase;
+	font-size: 3vw;
 }
 
 .editor > .mixtape.rap > .mixtape__content > .mixtape__title {
 	font-family: 'Underground';
 	text-transform: uppercase;
-	font-size: 26px;
+	font-size: 2vw;
 }
 
 .editor > .mixtape > .mixtape__content > .metrics__container {
@@ -563,18 +568,22 @@ main {
 
 .editor > .mixtape > .mixtape__content > .footer__container > .icons__footer > .icons__left {
 	display: flex;
-	height: 9vh;
-	gap: 1em;
+	height: 4vw;
+	gap: 0.5em;
 }
 
 .editor > .mixtape > .mixtape__content > .footer__container > .icons__footer > .icons__left > svg {
-	width: 100%;
+	width: 7vw;
 	height: 100%;
+}
+
+.editor > .mixtape > .mixtape__content > .footer__container > .icons__footer > .icons__left > .qr > img {
+	width: 4.1vw;
 }
 
 .editor > .mixtape > .mixtape__content > .footer__container > .icons__footer > .icons__brands {
 	display: flex;
-	height: 27px;
+	height: 2.2vw;
 	gap: 10px;
 }
 
@@ -584,7 +593,7 @@ main {
 
 .editor > .mixtape > .mixtape__content > .footer__container > span {
 	font-family: 'ClashDisplay-Variable';
-	font-size: 10px;
+	font-size: 0.78vw;
 	font-weight: 300;
 	text-align: justify;
 }
@@ -601,7 +610,7 @@ main {
 }
 
 .editor > .editor__options > h2 {
-	font-size: 3rem;
+	font-size: 3vw;
 	font-weight: 700;
 	letter-spacing: 2px;
 	text-transform: uppercase;
@@ -625,7 +634,6 @@ main {
 .editor > .editor__options > .editor__options--container > div > div {
 	display: flex;
 	flex-direction: column;
-	gap: 1em;
 }
 
 .editor > .editor__options > .editor__options--container > div > div > div {
@@ -634,8 +642,9 @@ main {
 }
 
 .editor > .editor__options > .editor__options--container > div > div > h3 { 
-	font-size: 1.5rem;
+	font-size: 2vw;
 	font-weight: 600;
+	padding-bottom: 0.8em;
 }
 
 .editor > .editor__options > .editor__options--container > div > div > div > button {
@@ -644,6 +653,7 @@ main {
 	background-color: transparent;
 	border: 2px solid var(--purple-heart-400);
 	color: inherit;
+	font-size: 1.3vw;
 	cursor: pointer;
 }
 
@@ -654,6 +664,7 @@ main {
 	background-color: transparent;
 	border: 2px solid var(--purple-heart-400);
 	color: inherit;
+	font-size: 1.3vw;
 	cursor: pointer;
 }
 
@@ -669,10 +680,11 @@ main {
 } 
 
 .editor > .editor__options > .editor__options--container > div > .select {
-	--width: 120px;
+	--width: 10vw;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	font-size: 1.3vw;
 	justify-content: flex-start;
 	position: relative;
 }
@@ -869,6 +881,7 @@ footer {
     margin-bottom: 2em;
 	width: 80%;
     font-family: 'Author', sans-serif;
+	font-size: 1.3vw;
     font-weight: 400;
     font-style: italic;
 	text-align: center;
@@ -901,7 +914,7 @@ footer::before {
 }
 
 .icons_links > a > svg {
-	width: 30px;
+	width: 2vw;
 	pointer-events: none;
 }
 
@@ -910,6 +923,15 @@ footer::before {
 }
 
 @media (width <= 480px) {
+
+	header > nav {
+		margin-right: 1em;
+		margin-top: 1em;
+	}
+
+	header > nav > a {
+		font-size: 5vw;
+	} 
 
 	.hero > .hero__container > .title {
 		font-size: 4rem;
@@ -957,6 +979,7 @@ footer::before {
 	.editor {
 		flex-direction: column-reverse;
 		width: 90%;
+		gap: 3em;
 	}
 
 	.editor > .editor__options > .editor__options--container {
@@ -971,22 +994,50 @@ footer::before {
 		align-items: center;
 	}
 
+	.editor > .editor__options > .editor__options--container > .containerLeft > div > div > button,
+	.editor > .editor__options > .editor__options--container > div > .select,
+	.editor > .editor__options > .editor__options--container > div.containerRight > .editor__options--download > button {
+		font-size: 4.3vw;
+	}
+
+	.editor > .editor__options > .editor__options--container > div > .select > .select__selected {
+		width: 28vw;
+	}
+
 	.editor > .editor__options > .editor__options--container > .containerLeft  > div > h3,
 	.editor > .editor__options > .editor__options--container > .containerRight > div > h3 {
+		font-size: 6vw;
 		text-align: center;
 	}
 
 	.editor > .mixtape.pop > .mixtape__content > .mixtape__title,
-	.editor > .mixtape.rap > .mixtape__content > .mixtape__title  {
+	.editor > .mixtape.rap > .mixtape__content > .mixtape__title {
 		font-size: 4.5vw;
 	}
 
 	.editor > .mixtape.metal > .mixtape__content > .mixtape__title {
-		font-size: 5vw;
+		font-size: 5.5vw;
+	}
+
+	.editor > .mixtape.k_pop > .mixtape__content > .mixtape__title {
+		font-size: 4vw;
+	}
+
+	.editor > .mixtape.dubstep > .mixtape__content > .mixtape__title {
+		font-size: 6vw;
 	}
 
 	.editor > .mixtape > .mixtape__content > .footer__container > .icons__footer > .icons__left {
-		height: 13vw;
+		height: 10vw;
+	}
+
+	.editor > .mixtape > .mixtape__content > .footer__container > .icons__footer > .icons__left > svg {
+		width: 16vw;
+	}
+
+	.editor > .mixtape > .mixtape__content > .footer__container > .icons__footer > .icons__left > .qr > img {
+		width: 10.4vw;
+		height: 100%;
 	}
 
 	.editor > .mixtape > .mixtape__content > .footer__container > .icons__footer > .icons__brands {
@@ -999,7 +1050,7 @@ footer::before {
 	}
 
 	.editor > .mixtape > .mixtape__content > .footer__container > span {
-		font-size: 1.74vw;	
+		font-size: 1.75vw;	
 	}
 
 	.editor > .mixtape {
@@ -1012,7 +1063,7 @@ footer::before {
 	}
 
 	.k_pop {
-		font-size: 4vw;
+		font-size: 4.4vw;
 	}
 
 	.pop, .dubstep {
@@ -1020,6 +1071,28 @@ footer::before {
 	}
 
 	.metal {
-		font-size: 5.4vw;
+		font-size: 5vw;
+	}
+
+	.editor > .mixtape.metal > div.name__span-right,
+	.editor > .mixtape.metal > div.name__span-left,
+	.editor > .mixtape.pop > div.name__span-right,
+	.editor > .mixtape.pop > div.name__span-left {
+		font-size: 3vw;
+	}
+
+	.editor > .mixtape.rap > div.name__span-right,
+	.editor > .mixtape.rap > div.name__span-left,
+	.editor > .mixtape.k_pop > div.name__span-right,
+	.editor > .mixtape.k_pop > div.name__span-left {
+		font-size: 2.5vw;
+	}
+
+	footer {
+		font-size: 3.2vw;
+	}
+
+	.icons_links > a > svg {
+		width: 6vw;
 	}
 }

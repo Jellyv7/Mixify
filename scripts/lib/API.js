@@ -33,12 +33,12 @@ export const fetchFromSpotify = async (endpoint, token) => {
 
 export const fetchData = async token => {
 
-	const createQr = async () => {
-		const qrCode = await fetch(`https://api.qrserver.com/v1/create-qr-code/?size=60x60&format=svg&data=https://spotifymixify.netlify.app/`);
-		return await qrCode.text()
-	}
+	// const createQr = async () => {
+	// 	const qrCode = await fetch(`https://api.qrserver.com/v1/create-qr-code/?size=60x60&format=png&data=https://spotifymixify.netlify.app/`);
+	// 	return await qrCode.text()
+	// }
 	
-	const QR = await createQr();
+	// const QR = await createQr();
 
 	//Destructure from function fetchFromSpotify, all the fetch at the same time with Promise.all()
     try {
@@ -111,7 +111,6 @@ export const fetchData = async token => {
 			country: profileJSON.country,
 			followers: profileJSON.followers.total,
 			duration: `${countLong}`,
-			codeQR: `${QR}`,
             metrics: {
                 topTracks: {
                     longTerm: topTracksLongJSON.items.map(({ name, artists: [{ name: artistName }] }) => `${name} - ${artistName}`),
