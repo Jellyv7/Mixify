@@ -14,3 +14,7 @@ Don't be afraid to fork the project or send a pull request, I'm open to new func
 ## Why Javascript Vanilla?
 
 This project was intended to practice my abilities on pure Javascript, so this was a challenge for me. That's the answer. 🤠
+
+## Is this project active?
+
+Absolutely! Every day I look for ways to update and improve my projects, so you can be sure that Mixify will continue to be updated. Look forward to new themes!
