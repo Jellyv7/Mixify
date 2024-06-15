@@ -14,6 +14,10 @@ Thank you for your interest in contributing to the project! Open source ensures 
 
 <img src="./assets/images/contributing3.png"></img>
 
+To finish, we will go to ./scripts/utils/params.js and add our ClientID and the redirect URI that we have placed in the Spotify settings.
+
+<img src="./assets/images/contributing4.png"></img>
+
 ## Start collaborating! 🚀
 
 Don’t be afraid to touch the project and change (or delete) things; what’s important here is to improve the project for everyone’s benefit. As long as good practices and clean code are maintained, any contribution is welcome (no matter how small!).
@@ -44,6 +48,12 @@ Una vez tengamos nuestro proyecto en nuestra máquina local, vamos a dirigirnos 
 <img src="./assets/images/contributing2.png"></img>
 
 Una vez tengamos nuestro proyecto en Spotify, debemos hacer dos cosas: copiar nuestro ClientID (encontrado en las configuraciones) e ir a las configuraciones de nuestro proyecto y agregar nuestro URI de redirección, en este caso, http://localhost:5500/ (coloca el puerto que quieras).
+
+<img src="./assets/images/contributing3.png"></img>
+
+- Para finalizar, iremos a ./scripts/utils/params.js y agregaremos nuestro ClientID y el URI de redirección que hemos colocado en la configuración de Spotify.
+
+<img src="./assets/images/contributing4.png"></img>
 
 ## ¡Comienza a colaborar! 🚀
 
