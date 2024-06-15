@@ -64,8 +64,8 @@ export const themes = {
     name: "Rap",
     id: "rap",
   },
-  dark: {
-    name: "Dark",
-    id: "dark",
+  randb: {
+    name: "R&B",
+    id: "randb",
   },
 };

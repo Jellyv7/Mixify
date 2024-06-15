@@ -7,7 +7,7 @@ import { metrics, terms, alignments, themes } from "../lib/index.js";
 const { artist, tracks, genre } = metrics;
 const { longTerm, mediumTerm, shortTerm } = terms;
 const { center, left, right } = alignments;
-const { metal, dubstep, pop, kpop, rap, dark } = themes;
+const { metal, dubstep, pop, kpop, rap, randb } = themes;
 
 export default function (data) {
   const props = {
@@ -196,9 +196,9 @@ export default function (data) {
       base: false,
     },
     {
-      name: dark.name,
+      name: randb.name,
       callback: (e) => handleTheme(e),
-      id: dark.id,
+      id: randb.id,
       base: false,
     },
   ];

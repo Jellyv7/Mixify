@@ -158,10 +158,10 @@
 	--rap-border-color: #0e0c0c;
 	--rap-font-color: #720909;
 	--rap-fontborder-color: #c51515;
-	--dark-background-color: #0e0c0c;
-	--dark-font-color: #ffffff;
-	--dark-border-color: #000000;
-	--dark-fontborder-color: #ffffff;
+	--randb-background-color: #0e0c0c;
+	--randb-font-color: #ffffff;
+	--randb-border-color: #000000;
+	--randb-fontborder-color: #ffffff;
 }
 
 *:link,
@@ -416,15 +416,15 @@ main {
 	opacity: 0.6;
 }
 
-.dark {
-	font-size: 1vw;
+.randb {
+	font-size: 1.6vw;
 	font-family: 'Adventure';
 	letter-spacing: 1px;
-	background-color: var(--dark-background-color);
-	color: var(--dark-font-color);
+	background-color: var(--randb-background-color);
+	color: var(--randb-font-color);
 }
 
-.dark > .texture {
+.randb > .texture {
 	background-image: url('./assets/images/dark-texture.png');
 	opacity: 0.2;
 }
@@ -495,12 +495,12 @@ main {
 	color: var(--rap-fontborder-color);
 }
 
-.editor > .mixtape.dark > .name__span-right,
-.editor > .mixtape.dark > .name__span-left {
+.editor > .mixtape.randb > .name__span-right,
+.editor > .mixtape.randb > .name__span-left {
 	font-size: 0.8vw;
 	letter-spacing: 2px;
-	background-color: var(--dark-border-color);
-	color: var(--dark-fontborder-color);
+	background-color: var(--randb-border-color);
+	color: var(--randb-fontborder-color);
 }
 
 .editor > .mixtape > .mixtape__content {
@@ -1058,7 +1058,7 @@ footer::before {
 		font-size: 4.5vw;
 	}
 
-	.editor > .mixtape.dark > .mixtape__content > .mixtape__title,
+	.editor > .mixtape.randb > .mixtape__content > .mixtape__title,
 	.editor > .mixtape.k_pop > .mixtape__content > .mixtape__title {
 		font-size: 4.5vw;
 	}
@@ -1114,8 +1114,8 @@ footer::before {
 		font-size: 5vw;
 	}
 
-	.dark {
-		font-size: 5vw;
+	.randb {
+		font-size: 4vw;
 	}
 
 	.editor > .mixtape.metal > div.name__span-right,
@@ -1132,9 +1132,9 @@ footer::before {
 		font-size: 2.5vw;
 	}
 
-	.editor > .mixtape.dark > div.name__span-right,
-	.editor > .mixtape.dark > div.name__span-left {
-		font-size: 3vw;
+	.editor > .mixtape.randb > div.name__span-right,
+	.editor > .mixtape.randb > div.name__span-left {
+		font-size: 2vw;
 	}
 
 	footer {
