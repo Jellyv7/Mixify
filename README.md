@@ -27,6 +27,6 @@ This project was intended to practice my abilities on pure Javascript, so this w
 > _**Please, read the [**contributing guide**](./CONTRIBUTING.md) and follow the instructions.**_
 
 > [!NOTE]
-> You found a [**bug?**](https://github.com/Jellyv7/mixify/issues), please, provide me information!  
+> _**Found a [**bug?**](https://github.com/Jellyv7/mixify/issues), please, provide me information!**_  
 
 
