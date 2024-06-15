@@ -12,6 +12,8 @@ Thank you for your interest in contributing to the project! Open source ensures 
 
 - Once we have our project on Spotify, we must do two things: copy our ClientID (found in the settings) and go to our project settings and add our redirection URI, in this case, http://localhost:5500/ (set the port you want).
 
+<img src="./assets/images/contributing3.png"></img>
+
 ## Start collaborating! 🚀
 
 Don’t be afraid to touch the project and change (or delete) things; what’s important here is to improve the project for everyone’s benefit. As long as good practices and clean code are maintained, any contribution is welcome (no matter how small!).
