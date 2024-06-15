@@ -102,6 +102,13 @@
 		font-style: normal;
 }
 
+@font-face {
+	font-family: 'Adventure';
+	src: url('./assets/fonts/Adventure.otf') format('opentype');
+		font-display: swap;
+		font-style: oblique;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -150,7 +157,11 @@
 	--rap-background-color: #6d6c6c;
 	--rap-border-color: #0e0c0c;
 	--rap-font-color: #720909;
-	--rap-fontborder-color: #b4abab;
+	--rap-fontborder-color: #c51515;
+	--dark-background-color: #0e0c0c;
+	--dark-font-color: #ffffff;
+	--dark-border-color: #000000;
+	--dark-fontborder-color: #ffffff;
 }
 
 *:link,
@@ -405,6 +416,19 @@ main {
 	opacity: 0.6;
 }
 
+.dark {
+	font-size: 1vw;
+	font-family: 'Adventure';
+	letter-spacing: 1px;
+	background-color: var(--dark-background-color);
+	color: var(--dark-font-color);
+}
+
+.dark > .texture {
+	background-image: url('./assets/images/dark-texture.png');
+	opacity: 0.2;
+}
+
 .editor > .mixtape {
 	--size: 33.675vw;
     display: flex;
@@ -469,6 +493,14 @@ main {
 	letter-spacing: 2px;
 	background-color: var(--rap-border-color);
 	color: var(--rap-fontborder-color);
+}
+
+.editor > .mixtape.dark > .name__span-right,
+.editor > .mixtape.dark > .name__span-left {
+	font-size: 0.8vw;
+	letter-spacing: 2px;
+	background-color: var(--dark-border-color);
+	color: var(--dark-fontborder-color);
 }
 
 .editor > .mixtape > .mixtape__content {
@@ -1026,6 +1058,7 @@ footer::before {
 		font-size: 4.5vw;
 	}
 
+	.editor > .mixtape.dark > .mixtape__content > .mixtape__title,
 	.editor > .mixtape.k_pop > .mixtape__content > .mixtape__title {
 		font-size: 4.5vw;
 	}
@@ -1081,6 +1114,10 @@ footer::before {
 		font-size: 5vw;
 	}
 
+	.dark {
+		font-size: 5vw;
+	}
+
 	.editor > .mixtape.metal > div.name__span-right,
 	.editor > .mixtape.metal > div.name__span-left,
 	.editor > .mixtape.pop > div.name__span-right,
@@ -1093,6 +1130,11 @@ footer::before {
 	.editor > .mixtape.k_pop > div.name__span-right,
 	.editor > .mixtape.k_pop > div.name__span-left {
 		font-size: 2.5vw;
+	}
+
+	.editor > .mixtape.dark > div.name__span-right,
+	.editor > .mixtape.dark > div.name__span-left {
+		font-size: 3vw;
 	}
 
 	footer {
